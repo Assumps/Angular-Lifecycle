@@ -32,8 +32,16 @@ export class LifecycleChildComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges){
+    console.log(changes);
     console.log(this.name + " - ngOnChanges");
     this.newEvent("ngOnChanges");
+    for(let propName in changes){
+      console.log(propName);
+    }
+    // if(changes['name']){
+    //   console.log("new name: " + changes['name'].currentValue);
+    //   console.log("old name: " + changes['name'].previousValue);
+    // }
   }
 
   ngOnDestroy(){
