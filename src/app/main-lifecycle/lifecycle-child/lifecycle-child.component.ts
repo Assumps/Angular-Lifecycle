@@ -21,6 +21,7 @@ export class LifecycleChildComponent implements OnInit, OnDestroy, OnChanges {
 
   colors: string[] = ["accent", "warn", "primary"]
 
+
   constructor() { 
     console.log(this.name + " - Constructor");
     this.newEvent("constructor");
